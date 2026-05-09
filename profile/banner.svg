@@ -1,0 +1,117 @@
+<svg
+  width="1280"
+  height="320"
+  viewBox="0 0 1280 320"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#111111" />
+      <stop offset="100%" stop-color="#1e1e1e" />
+    </linearGradient>
+
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="4" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <pattern
+      id="grid"
+      width="40"
+      height="40"
+      patternUnits="userSpaceOnUse"
+    >
+      <path
+        d="M 40 0 L 0 0 0 40"
+        fill="none"
+        stroke="#2a2a2a"
+        stroke-width="1"
+      />
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1280" height="320" fill="url(#bg)" />
+  <rect width="1280" height="320" fill="url(#grid)" opacity="0.35" />
+
+  <!-- Glow blobs -->
+  <circle cx="180" cy="80" r="120" fill="#00ff00" opacity="0.06"/>
+  <circle cx="1080" cy="260" r="160" fill="#00ff00" opacity="0.04"/>
+
+  <!-- Terminal window -->
+  <rect
+    x="80"
+    y="50"
+    width="1120"
+    height="220"
+    rx="18"
+    fill="#0d0d0d"
+    stroke="#2f2f2f"
+    stroke-width="2"
+  />
+
+  <!-- Terminal top bar -->
+  <rect
+    x="80"
+    y="50"
+    width="1120"
+    height="42"
+    rx="18"
+    fill="#151515"
+  />
+
+  <!-- Top bar dots -->
+  <circle cx="115" cy="71" r="6" fill="#ff5f56"/>
+  <circle cx="140" cy="71" r="6" fill="#ffbd2e"/>
+  <circle cx="165" cy="71" r="6" fill="#27c93f"/>
+
+  <!-- Main prompt -->
+  <text
+    x="130"
+    y="165"
+    font-family="monospace"
+    font-size="72"
+    fill="#00ff88"
+    filter="url(#glow)"
+  >
+    &gt;_
+  </text>
+
+  <!-- Org name -->
+  <text
+    x="260"
+    y="160"
+    font-family="monospace"
+    font-size="48"
+    font-weight="700"
+    fill="#f5f5f5"
+  >
+    Tipix.dev
+  </text>
+
+  <!-- Subtitle -->
+  <text
+    x="262"
+    y="205"
+    font-family="monospace"
+    font-size="22"
+    fill="#8b949e"
+  >
+    open source • DevOps tooling • infrastructure
+  </text>
+
+  <!-- Fake terminal line -->
+  <text
+    x="130"
+    y="245"
+    font-family="monospace"
+    font-size="20"
+    fill="#00ff88"
+    opacity="0.75"
+  >
+    $ git clone github.com/Tipix-dev/OLS.git
+  </text>
+</svg>
