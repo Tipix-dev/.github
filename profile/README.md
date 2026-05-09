@@ -1,1 +1,1 @@
-[Tipix banner](./banner.svg)
+![Tipix banner](banner.svg)
